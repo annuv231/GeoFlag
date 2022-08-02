@@ -1,3 +1,3 @@
 import os from "node:os";
 
-console.log(os.homedir());
+console.log();
