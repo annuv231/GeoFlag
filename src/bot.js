@@ -3,6 +3,7 @@ const path = require("node:path");
 const { Client, Collection, GatewayIntentBits } = require("discord.js");
 require("dotenv").config();
 const data = require("./countryApi");
+const keepAlive = require("../server");
 
 console.log(data);
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -38,3 +39,4 @@ for (const file of eventFiles) {
 }
 
 client.login(process.env.token);
+keepAlive();
